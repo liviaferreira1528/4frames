@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | 4Frames</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .glass-card {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(16px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 51, 92, 0.4);
+        }
+        .glass-card h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .glass-card h2 span {
+            color: #ff335c;
+        }
+        .glass-card .sub {
+            text-align: center;
+            color: #c9cbd5;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        .input-group {
+            margin-bottom: 1.2rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.5rem;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+            outline: none;
+        }
+        .input-group input:focus {
+            border-color: #ff335c;
+            box-shadow: 0 0 12px rgba(255, 51, 92, 0.3);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .btn-login {
+            width: 100%;
+            background: #ff335c;
+            border: none;
+            padding: 14px;
+            border-radius: 2rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 0.5rem;
+        }
+        .btn-login:hover {
+            background: #ff5477;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 51, 92, 0.3);
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #c9cbd5;
+        }
+        .toggle-link a {
+            color: #ff335c;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+        .form-title {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-container">
+        <div class="glass-card">
+            <h2>4<span>Frames</span></h2>
+            <div class="sub">Sua watchlist pessoal</div>
+
+            <div id="loginForm">
+                <div class="form-title">Login</div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Seu e-mail">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="senha" placeholder="Sua senha">
+                </div>
+                <button class="btn-login" onclick="fazerLogin()">Entrar</button>
+                <div class="toggle-link">
+                    Não tem conta? <a id="showCadastro">Criar conta</a>
+                </div>
+            </div>
+
+            <div id="cadastroForm" style="display: none;">
+                <div class="form-title">Cadastro</div>
+                <div class="input-group">
+                    <input type="text" id="nome" placeholder="Seu nome">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="emailCad" placeholder="Seu e-mail">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="senhaCad" placeholder="Senha (mínimo 6 caracteres)">
+                </div>
+                <button class="btn-login" onclick="fazerCadastro()">Cadastrar</button>
+                <div class="toggle-link">
+                    Já tem conta? <a id="showLogin">Fazer login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Entrance animation
+        if (typeof gsap !== 'undefined') {
+            gsap.from('.glass-card', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' });
+        }
+
+        // ==========================================
+        // FUNÇÃO DE LOGIN
+        // ==========================================
+        
+        async function fazerLogin() {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            
+            if (!email || !senha) {
+                alert('Preencha todos os campos');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, senha })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('usuario', JSON.stringify(data.usuario));
+                    alert(`Bem-vindo, ${data.usuario.nome}!`);
+                    window.location.href = 'inicio.html';
+                } else {
+                    alert(data.erro || 'Email ou senha incorretos');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao conectar com o servidor. Verifique se o servidor está rodando.');
+            }
+        }
+
+        // ==========================================
+        // FUNÇÃO DE CADASTRO
+        // ==========================================
+
+        async function fazerCadastro() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('emailCad').value;
+            const senha = document.getElementById('senhaCad').value;
+            
+            if (!nome || !email || !senha) {
+                alert('Preencha todos os campos');
+                return;
+            }
+            
+            if (senha.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/cadastro', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nome, email, senha })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    alert('Cadastro realizado com sucesso! Agora faça login.');
+                    document.getElementById('loginForm').style.display = 'block';
+                    document.getElementById('cadastroForm').style.display = 'none';
+                } else {
+                    alert(data.erro || 'Erro no cadastro');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao conectar com o servidor. Verifique se o servidor está rodando.');
+            }
+        }
+
+        // ==========================================
+        // TOGGLE ENTRE LOGIN E CADASTRO
+        // ==========================================
+
+        document.getElementById('showCadastro').addEventListener('click', () => {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('cadastroForm').style.display = 'block';
+        });
+
+        document.getElementById('showLogin').addEventListener('click', () => {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('cadastroForm').style.display = 'none';
+        });
+
+        // ==========================================
+        // ENVIAR COM ENTER
+        // ==========================================
+
+        document.getElementById('senha').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') fazerLogin();
+        });
+
+        document.getElementById('senhaCad').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') fazerCadastro();
+        });
+    </script>
+</body>
+</html>

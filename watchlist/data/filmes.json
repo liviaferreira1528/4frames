@@ -1,0 +1,1281 @@
+[
+    {
+        "id": 1,
+        "titulo": "Interstellar",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "8.7",
+        "ano": "2014",
+        "descricao": "Uma equipe de exploradores atravessa um buraco de minhoca no espaço para tentar salvar a humanidade.",
+        "poster": "assets/posters/Interstellar.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Breaking Bad",
+        "tipo": "Serie",
+        "genero": "drama",
+        "nota": "9.5",
+        "ano": "2008",
+        "descricao": "Um professor de química decide fabricar metanfetamina após receber um diagnóstico terminal.",
+        "poster": "assets/posters/breakingbad.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "The Batman",
+        "tipo": "Filme",
+        "genero": "acao",
+        "nota": "7.8",
+        "ano": "2022",
+        "descricao": "Batman investiga uma série de assassinatos em Gotham enquanto enfrenta seus próprios conflitos.",
+        "poster": "assets/posters/batman.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Stranger Things",
+        "tipo": "Serie",
+        "genero": "drama",
+        "nota": "8.6",
+        "ano": "2016",
+        "descricao": "Um grupo de crianças enfrenta eventos sobrenaturais em uma pequena cidade.",
+        "poster": "assets/posters/strangerthings.jpg"
+    },
+    {
+        "id": 5,
+        "titulo": "Oppenheimer",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "8.4",
+        "ano": "2023",
+        "descricao": "A trajetória do físico responsável pelo desenvolvimento da bomba atômica.",
+        "poster": "assets/posters/Oppenheimer.jpg"
+    },
+    {
+        "id": 6,
+        "titulo": "The Boys",
+        "tipo": "Serie",
+        "genero": "acao",
+        "nota": "8.7",
+        "ano": "2019",
+        "descricao": "Um grupo tenta derrubar super-heróis corruptos controlados por uma grande corporação.",
+        "poster": "assets/posters/theboys.jpg"
+    },
+    {
+        "id": 7,
+        "titulo": "Duna",
+        "tipo": "Filme",
+        "genero": "acao",
+        "nota": "8.0",
+        "ano": "2021",
+        "descricao": "Paul Atreides enfrenta conflitos políticos e profecias em Arrakis.",
+        "poster": "assets/posters/Duna.jpg"
+    },
+    {
+        "id": 8,
+        "titulo": "Dark",
+        "tipo": "Serie",
+        "genero": "drama",
+        "nota": "8.8",
+        "ano": "2017",
+        "descricao": "O desaparecimento de uma criança revela uma complexa rede de viagens no tempo.",
+        "poster": "assets/posters/Dark.jpg"
+    },
+    {
+        "id": 9,
+        "titulo": "Arcane",
+        "tipo": "Serie",
+        "genero": "acao",
+        "nota": "9.0",
+        "ano": "2021",
+        "descricao": "Conflitos políticos e familiares surgem entre as cidades de Piltover e Zaun.",
+        "poster": "assets/posters/arcane.jpg"
+    },
+    {
+        "id": 10,
+        "titulo": "Parasita",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "8.5",
+        "ano": "2019",
+        "descricao": "Uma família pobre se infiltra na vida de uma família rica com consequências imprevisíveis.",
+        "poster": "assets/posters/parasita.jpg"
+    },
+    {
+        "id": 11,
+        "titulo": "Peaky Blinders",
+        "tipo": "Serie",
+        "genero": "drama",
+        "nota": "8.8",
+        "ano": "2013",
+        "descricao": "Uma gangue familiar ascende ao poder na Inglaterra pós-guerra.",
+        "poster": "assets/posters/peakyblinders.jpg"
+    },
+    {
+        "id": 12,
+        "titulo": "The Last of Us",
+        "tipo": "Serie",
+        "genero": "acao",
+        "nota": "8.8",
+        "ano": "2023",
+        "descricao": "Em um mundo devastado, Joel e Ellie tentam sobreviver.",
+        "poster": "assets/posters/thelastofus.jpg"
+    },
+    {
+        "id": 13,
+        "titulo": "Alice no País das Maravilhas",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "6.5",
+        "ano": "2010",
+        "descricao": "Alice retorna ao País das Maravilhas e descobre que é a única capaz de derrotar a Rainha Vermelha.",
+        "poster": "assets/posters/alicepaisdasmaravilhas.png"
+    },
+    {
+        "id": 14,
+        "titulo": "Bela e a Fera",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.1",
+        "ano": "2017",
+        "descricao": "Uma jovem corajosa encontra amor onde menos esperava ao ser aprisionada em um castelo encantado.",
+        "poster": "assets/posters/belaeafera.jpg"
+    },
+    {
+        "id": 15,
+        "titulo": "Coraline",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.7",
+        "ano": "2009",
+        "descricao": "Uma garota descobre um mundo paralelo misterioso e perturbador atrás de uma porta secreta.",
+        "poster": "assets/posters/Coraline.jpg"
+    },
+    {
+        "id": 16,
+        "titulo": "Crepúsculo",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "5.2",
+        "ano": "2008",
+        "descricao": "Uma adolescente se apaixona por um vampiro misterioso em uma pequena cidade chuvosa.",
+        "poster": "assets/posters/Crepusculo.jpg"
+    },
+    {
+        "id": 17,
+        "titulo": "Divertida Mente",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "8.1",
+        "ano": "2015",
+        "descricao": "As emoções de uma garota ganham vida enquanto ela tenta se adaptar a uma nova cidade.",
+        "poster": "assets/posters/divertidamente.jpg"
+    },
+    {
+        "id": 18,
+        "titulo": "Divertida Mente 2",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.5",
+        "ano": "2024",
+        "descricao": "Riley entra na adolescência e novas emoções surgem para complicar sua vida interior.",
+        "poster": "assets/posters/divertidamente2.jpg"
+    },
+    {
+        "id": 19,
+        "titulo": "Elementos",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "6.8",
+        "ano": "2023",
+        "descricao": "Em uma cidade onde fogo, água, terra e ar convivem, dois elementos improváveis se apaixonam.",
+        "poster": "assets/posters/Elementos.jpg"
+    },
+    {
+        "id": 20,
+        "titulo": "Encantada",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.1",
+        "ano": "2007",
+        "descricao": "Uma princesa de um mundo de animação cai no mundo real e precisa encontrar o caminho de volta.",
+        "poster": "assets/posters/Encantada.jpg"
+    },
+    {
+        "id": 21,
+        "titulo": "Enrolados",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.7",
+        "ano": "2010",
+        "descricao": "Rapunzel foge da torre com a ajuda de um ladrão para ver as luzes flutuantes de seu aniversário.",
+        "poster": "assets/posters/Enrolados.jpg"
+    },
+    {
+        "id": 22,
+        "titulo": "A Fantástica Fábrica de Chocolate",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "6.7",
+        "ano": "2005",
+        "descricao": "Charlie Bucket ganha um ingresso dourado para visitar a misteriosa fábrica de Willy Wonka.",
+        "poster": "assets/posters/fabricadechocolate.jpg"
+    },
+    {
+        "id": 23,
+        "titulo": "Festa no Céu",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.0",
+        "ano": "2009",
+        "descricao": "Carl Fredricksen viaja até a América do Sul amarrando balões à sua casa para realizar o sonho da esposa.",
+        "poster": "assets/posters/festanoceu.jpg"
+    },
+    {
+        "id": 24,
+        "titulo": "Frozen",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.4",
+        "ano": "2013",
+        "descricao": "Anna embarca em uma aventura para encontrar sua irmã Elsa, cujos poderes de gelo ameaçam o reino.",
+        "poster": "assets/posters/Frozen.jpg"
+    },
+    {
+        "id": 25,
+        "titulo": "It - A Coisa (2017)",
+        "tipo": "Filme",
+        "genero": "terror",
+        "nota": "7.3",
+        "ano": "2017",
+        "descricao": "Um grupo de crianças enfrenta uma entidade maligna que assume a forma de um palhaço assustador.",
+        "poster": "assets/posters/It(2017).jpg"
+    },
+    {
+        "id": 26,
+        "titulo": "It - Capítulo 2",
+        "tipo": "Filme",
+        "genero": "terror",
+        "nota": "6.5",
+        "ano": "2019",
+        "descricao": "O Clube dos Perdedores retorna a Derry 27 anos depois para enfrentar Pennywise de vez.",
+        "poster": "assets/posters/ITcapitulo2.jpg"
+    },
+    {
+        "id": 27,
+        "titulo": "Lava Girl e Shark Boy",
+        "tipo": "Filme",
+        "genero": "aventura",
+        "nota": "4.9",
+        "ano": "2005",
+        "descricao": "Um garoto e seus heróis imaginários embarcam em uma aventura para salvar o Planeta Drool.",
+        "poster": "assets/posters/lavagirlandsharkboy.jpg"
+    },
+    {
+        "id": 28,
+        "titulo": "Malévola",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.0",
+        "ano": "2014",
+        "descricao": "A história não contada da vilã mais icônica da Disney e a maldição que lançou sobre a Bela Adormecida.",
+        "poster": "assets/posters/Malévola.jpg"
+    },
+    {
+        "id": 29,
+        "titulo": "Matilda",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.0",
+        "ano": "1996",
+        "descricao": "Uma garota superdotada e negligenciada pelos pais descobre que possui poderes telecinéticos.",
+        "poster": "assets/posters/Matilda.jpg"
+    },
+    {
+        "id": 30,
+        "titulo": "Maze Runner",
+        "tipo": "Filme",
+        "genero": "acao",
+        "nota": "6.8",
+        "ano": "2014",
+        "descricao": "Thomas acorda em um labirinto sem memórias e precisa descobrir como escapar com um grupo de sobreviventes.",
+        "poster": "assets/posters/MazeRunner.jpg"
+    },
+    {
+        "id": 31,
+        "titulo": "Princesa e o Sapo",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.1",
+        "ano": "2009",
+        "descricao": "Tiana beija um príncipe transformado em sapo e acaba se transformando também, dando início a uma aventura.",
+        "poster": "assets/posters/princesaeosapo.jpg"
+    },
+    {
+        "id": 32,
+        "titulo": "Ratatouille",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "8.1",
+        "ano": "2007",
+        "descricao": "Um rato com talento para a culinária sonha em se tornar chef em um dos melhores restaurantes de Paris.",
+        "poster": "assets/posters/Ratatouille.jpg"
+    },
+    {
+        "id": 33,
+        "titulo": "Up - Altas Aventuras",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "8.3",
+        "ano": "2009",
+        "descricao": "Um senhor idoso parte em uma aventura aérea amarrando milhares de balões à sua casa.",
+        "poster": "assets/posters/upaltas.jpg"
+    },
+    {
+        "id": 34,
+        "titulo": "Os Smurfs",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "5.4",
+        "ano": "2011",
+        "descricao": "Os pequenos Smurfs caem em Nova York e precisam encontrar o caminho de volta para casa antes que Gargamel os capture.",
+        "poster": "assets/posters/ossmurfs.jpg"
+    },
+    {
+        "id": 35,
+        "titulo": "Cruella",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "7.4",
+        "ano": "2021",
+        "descricao": "A origem da vilã mais estilosa da Disney, uma jovem designer determinada a se tornar uma lenda da moda.",
+        "poster": "assets/posters/cruella.jpg"
+    },
+    {
+        "id": 36,
+        "titulo": "A Proposta",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "6.7",
+        "ano": "2009",
+        "descricao": "Uma editora exigente força seu assistente a fingir noivado para evitar ser deportada do país.",
+        "poster": "assets/posters/esposadementirinha.jpg"
+    },
+    {
+        "id": 37,
+        "titulo": "Titanic",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "7.9",
+        "ano": "1997",
+        "descricao": "Um romance improvável floresce entre dois jovens de classes sociais opostas a bordo do navio mais famoso da história.",
+        "poster": "assets/posters/titanic.jpg"
+    },
+    {
+        "id": 38,
+        "titulo": "Cisne Negro",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "8.0",
+        "ano": "2010",
+        "descricao": "Uma bailarina obcecada pela perfeição começa a perder o controle da realidade ao conseguir o papel principal em O Lago dos Cisnes.",
+        "poster": "assets/posters/blackswan.jpg"
+    },
+    {
+        "id": 39,
+        "titulo": "Como Perder um Homem em 10 Dias",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "6.4",
+        "ano": "2003",
+        "descricao": "Uma jornalista aposta que pode afastar qualquer homem em 10 dias, enquanto ele aposta que pode fazê-la se apaixonar.",
+        "poster": "assets/posters/comoperderumhomemem10dias.jpg"
+    },
+    {
+        "id": 40,
+        "titulo": "Como Eu Era Antes de Você",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "7.4",
+        "ano": "2016",
+        "descricao": "Uma jovem otimista começa a trabalhar como cuidadora de um homem tetraplégico e os dois mudam a vida um do outro.",
+        "poster": "assets/posters/comoeueraantesdevoce.jpg"
+    },
+    {
+        "id": 41,
+        "titulo": "Para Todos os Garotos que Já Amei",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "7.1",
+        "ano": "2018",
+        "descricao": "As cartas secretas de amor de uma adolescente são enviadas acidentalmente para todos os seus paixões passadas.",
+        "poster": "assets/posters/paratodososgarotosquejaamei.jpg"
+    },
+    {
+        "id": 42,
+        "titulo": "Bee Movie",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "6.1",
+        "ano": "2007",
+        "descricao": "Uma abelha processa os humanos por explorar o mel das abelhas e acaba mudando o equilíbrio do mundo.",
+        "poster": "assets/posters/Fulga das galinhas (2000).jpg"
+    },
+    {
+        "id": 43,
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.6",
+        "ano": "2001",
+        "descricao": "Um garoto descobre que é um bruxo e ingressa na Escola de Magia e Bruxaria de Hogwarts.",
+        "poster": "assets/posters/Harry Potter e a Pedra Filosofal de 2001.jpg"
+    },
+    {
+        "id": 44,
+        "titulo": "Hotel Transilvânia",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.1",
+        "ano": "2012",
+        "descricao": "Drácula administra um hotel exclusivo para monstros, mas tudo muda quando um humano aparece por lá.",
+        "poster": "assets/posters/Hotel Transylvania (2012).jpg"
+    },
+   {
+    "id": 45,
+    "titulo": "10 Coisas que Odeio em Você",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "7.3",
+    "ano": "1999",
+    "descricao": "Para poder namorar a garota popular, um jovem paga ao garoto mais temido da escola para se aproximar de sua irmã mais velha e difícil.",
+    "poster": "assets/posters/10coisasqueodeioemvoce.jpg"
+  },
+    {
+        "id": 46,
+        "titulo": "Os Incríveis 2",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "7.6",
+        "ano": "2018",
+        "descricao": "Elastigirl assume o papel de heroína enquanto Bob cuida dos filhos e Jack-Jack começa a manifestar seus poderes.",
+        "poster": "assets/posters/Incredibles 2 (2018).jpg"
+    },
+    {
+        "id": 47,
+        "titulo": "Meninas Malvadas",
+        "tipo": "Filme",
+        "genero": "drama",
+        "nota": "7.0",
+        "ano": "2004",
+        "descricao": "Uma garota criada fora da escola regular enfrenta as hierarquias sociais cruéis do ensino médio americano.",
+        "poster": "assets/posters/Mean Girls (2004).jpg"
+    },
+    {
+        "id": 48,
+        "titulo": "Paddington",
+        "tipo": "Filme",
+        "genero": "aventura",
+        "nota": "7.2",
+        "ano": "2014",
+        "descricao": "Um urso peruano educado vai para Londres em busca de um lar e é acolhido pela família Brown.",
+        "poster": "assets/posters/Paddington - 2014.jpg"
+    },
+    {
+        "id": 49,
+        "titulo": "Rio",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "6.9",
+        "ano": "2011",
+        "descricao": "Uma arara-azul criada como animal doméstico vai ao Rio de Janeiro e vive aventuras ao lado de uma arara selvagem.",
+        "poster": "assets/posters/Rio.jpg"
+    },
+     {
+        "id": 50,
+        "titulo": "Harry Potter e o Prisioneiro de Azkaban",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.9",
+        "ano": "2004",
+        "descricao": "Harry descobre que um perigoso prisioneiro fugiu de Azkaban e pode estar atrás dele.",
+        "poster": "assets/posters/harrypotterprisonerofazkaban.jpg"
+    },
+    {
+        "id": 51,
+        "titulo": "Mulher Maravilha",
+        "tipo": "Filme",
+        "genero": "acao",
+        "nota": "7.4",
+        "ano": "2017",
+        "descricao": "Diana, princesa das Amazonas, descobre seu pleno poder ao lutar ao lado de um espião na Primeira Guerra Mundial.",
+        "poster": "assets/posters/Wonder Woman (2017).jpg"
+    },
+    {
+        "id": 52,
+        "titulo": "Os Incríveis",
+        "tipo": "Filme",
+        "genero": "animacao",
+        "nota": "8.0",
+        "ano": "2004",
+        "descricao": "Uma família de super-heróis aposentados é forçada a sair do anonimato para enfrentar um novo vilão.",
+        "poster": "assets/posters/osincriveis1.jpg"
+    },
+    {
+        "id": 53,
+        "titulo": "Harry Potter e a Câmara Secreta",
+        "tipo": "Filme",
+        "genero": "fantasia",
+        "nota": "7.4",
+        "ano": "2002",
+        "descricao": "Harry retorna a Hogwarts e precisa descobrir o mistério por trás de uma série de ataques misteriosos.",
+        "poster": "assets/posters/HarryPotteran theChamberofSecrets (2002).jpg"
+    },
+
+ {
+    "id": 55,
+    "titulo": "Eu, a Patroa e as Crianças",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "7.1",
+    "ano": "2001",
+    "descricao": "Michael Kyle é um pai amoroso mas autoritário que tenta manter o controle da casa enquanto cria seus três filhos.",
+    "poster": "assets/posters/euapatroaeascriancas.jpg"
+  },
+  {
+    "id": 56,
+    "titulo": "Karatê Kid",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "7.3",
+    "ano": "1984",
+    "descricao": "Um adolescente aprende karatê com um mestre sábio para se defender de valentões e participar de um torneio.",
+    "poster": "assets/posters/karatekids.jpg"
+  },
+  {
+    "id": 57,
+    "titulo": "Enola Holmes",
+    "tipo": "Filme",
+    "genero": "aventura",
+    "nota": "6.6",
+    "ano": "2020",
+    "descricao": "A irmã caçula de Sherlock Holmes foge de um internato e parte em busca de sua mãe desaparecida.",
+    "poster": "assets/posters/enolaholmes.jpg"
+  },
+  {
+    "id": 58,
+    "titulo": "O Diário de uma Princesa",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.3",
+    "ano": "2001",
+    "descricao": "Uma adolescente tímida descobre que é herdeira do trono de um pequeno principado europeu.",
+    "poster": "assets/posters/diariodeumaprincesa.jpg"
+  },
+  {
+    "id": 59,
+    "titulo": "O Diabo Veste Prada",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.9",
+    "ano": "2006",
+    "descricao": "Uma jovem jornalista consegue emprego como assistente da editora-chefe mais temida da moda em Nova York.",
+    "poster": "assets/posters/diabovesteprada.jpg"
+  },
+  {
+    "id": 60,
+    "titulo": "Mamma Mia!",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.4",
+    "ano": "2008",
+    "descricao": "Uma noiva convida três ex-namorados da mãe para seu casamento tentando descobrir quem é seu pai.",
+    "poster": "assets/posters/mammamia.jpg"
+  },
+  {
+    "id": 61,
+    "titulo": "Brancas de Neve e os Sete Anões",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "7.2",
+    "ano": "1937",
+    "descricao": "A jovem Branca de Neve foge da rainha má e encontra abrigo com sete simpáticos anões na floresta.",
+    "poster": "assets/posters/branquelas.jpg"
+  },
+  {
+    "id": 62,
+    "titulo": "Meu Malvado Favorito",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "7.6",
+    "ano": "2010",
+    "descricao": "Um supervilão adota três órfãs para usá-las em seu plano maligno, mas acaba se apaixonando por elas.",
+    "poster": "assets/posters/meumalvadofavorito.jpg"
+  },
+ 
+  {
+    "id": 64,
+    "titulo": "A Bela Adormecida",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "7.2",
+    "ano": "1959",
+    "descricao": "Uma princesa amaldiçoada cai em sono eterno e só pode ser acordada pelo beijo do verdadeiro amor.",
+    "poster": "assets/posters/belaadormecida.jpg"
+  },
+
+   {
+    "id": 65,
+    "titulo": "Bailarina",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.8",
+    "ano": "2016",
+    "descricao": "Uma jovem órfã foge de um orfanato para perseguir seu sonho de se tornar bailarina na Ópera de Paris.",
+    "poster": "assets/posters/bailarina.jpg"
+  },
+  {
+    "id": 66,
+    "titulo": "Bolt",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "6.8",
+    "ano": "2008",
+    "descricao": "Um cão acredita ter superpoderes reais após viver em um set de filmagens a vida toda e parte em busca de sua dona.",
+    "poster": "assets/posters/Bolt.jpg"
+  },
+  {
+    "id": 67,
+    "titulo": "A Dama e o Vagabundo",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "7.3",
+    "ano": "1955",
+    "descricao": "Uma elegante cocker spaniel se apaixona por um vira-lata charmoso em uma aventura pelas ruas da cidade.",
+    "poster": "assets/posters/damaeovagabundo.jpg"
+  },
+  {
+    "id": 68,
+    "titulo": "Herbie: Um Fusca Turbinado",
+    "tipo": "Filme",
+    "genero": "aventura",
+    "nota": "5.5",
+    "ano": "2005",
+    "descricao": "Um fusca com vida própria ajuda uma jovem piloto a competir em corridas profissionais.",
+    "poster": "assets/posters/herbie.jpg"
+  },
+  {
+    "id": 69,
+    "titulo": "Sapatinho Vermelho e os Sete Anões",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "5.9",
+    "ano": "2019",
+    "descricao": "Uma releitura moderna de Branca de Neve onde os sete anões são na verdade príncipes amaldiçoados.",
+    "poster": "assets/posters/sapatinhovermelhoeossetesanoes.jpg"
+  },
+  {
+    "id": 70,
+    "titulo": "The Mask",
+    "tipo": "Filme",
+    "genero": "aventura",
+    "nota": "6.9",
+    "ano": "1994",
+    "descricao": "Um homem tímido encontra uma máscara mágica que o transforma em um ser caótico e cheio de energia.",
+    "poster": "assets/posters/themask.jpg"
+  },
+  {
+    "id": 71,
+    "titulo": "Os Willoughbys",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "6.4",
+    "ano": "2020",
+    "descricao": "Quatro irmãos de uma família excêntrica planejam se livrar dos pais negligentes e encontrar uma vida melhor.",
+    "poster": "assets/posters/thewilloughbys.jpg"
+  },
+  {
+    "id": 72,
+    "titulo": "Ferdinando",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "6.7",
+    "ano": "2017",
+    "descricao": "Um touro gentil e pacífico é confundido com um animal feroz e precisa provar que não é perigoso.",
+    "poster": "assets/posters/touroferdinando.jpg"
+  },
+  {
+    "id": 73,
+    "titulo": "BTS: Burn the Stage",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "8.2",
+    "ano": "2018",
+    "descricao": "Documentário que acompanha os bastidores da turnê mundial do BTS e a vida dos integrantes do grupo.",
+    "poster": "assets/posters/BTS.jpg"
+  },
+  {
+    "id": 74,
+    "titulo": "Supernatural",
+    "tipo": "Serie",
+    "genero": "terror",
+    "nota": "8.4",
+    "ano": "2005",
+    "descricao": "Dois irmãos percorrem os Estados Unidos caçando criaturas sobrenaturais enquanto buscam seu pai desaparecido.",
+    "poster": "assets/posters/supernatural.jpg"
+  },
+  {
+    "id": 75,
+    "titulo": "Dias Perfeitos",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "7.8",
+    "ano": "2023",
+    "descricao": "Um homem simples que trabalha como limpador de banheiros em Tóquio encontra beleza e significado nas pequenas coisas da vida.",
+    "poster": "assets/posters/diasperfeitos.jpg"
+  },
+
+    {
+    "id": 76,
+    "titulo": "Alquimia dos Almas",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "7.8",
+    "ano": "2022",
+    "descricao": "Em uma terra de magia, uma guerreira com poderes especiais é contratada para ajudar o filho de uma família nobre.",
+    "poster": "assets/posters/alquimiadasalmas.jpg"
+  },
+  {
+    "id": 77,
+    "titulo": "Anne com E",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "8.6",
+    "ano": "2017",
+    "descricao": "A história de Anne Shirley, uma órfã imaginativa adotada por engano por um irmão e irmã que vivem numa fazenda.",
+    "poster": "assets/posters/annecome.jpg"
+  },
+  {
+    "id": 78,
+    "titulo": "Chicken Little",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "5.7",
+    "ano": "2005",
+    "descricao": "Um frango desajeitado tenta recuperar sua reputação na cidade após causar pânico ao dizer que o céu estava caindo.",
+    "poster": "assets/posters/chickenlittle.jpg"
+  },
+  {
+    "id": 79,
+    "titulo": "Debi e Loide Dois Idiotas em Apuros",
+    "tipo": "Filme",
+    "genero": "aventura",
+    "nota": "6.0",
+    "ano": "1994",
+    "descricao": "Dois amigos sem noção embarcam em uma viagem absurda para devolver uma mala a uma mulher misteriosa.",
+    "poster": "assets/posters/debi&loidedoisidiotasemapuros.jpg"
+  },
+  {
+    "id": 80,
+    "titulo": "Descendentes",
+    "tipo": "Filme",
+    "genero": "fantasia",
+    "nota": "6.2",
+    "ano": "2015",
+    "descricao": "Os filhos dos vilões mais famosos da Disney recebem a chance de estudar na escola de heróis de Auradon.",
+    "poster": "assets/posters/descendants.jpg"
+  },
+  {
+    "id": 81,
+    "titulo": "Juntos e Misturados",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.3",
+    "ano": "2014",
+    "descricao": "Dois pais solteiros e seus filhos acabam dividindo uma suíte de lua de mel numa resort africana.",
+    "poster": "assets/posters/juntosemisturados.jpg"
+  },
+  {
+    "id": 82,
+    "titulo": "Limonada com Boca de Peixe",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.0",
+    "ano": "2012",
+    "descricao": "Uma jovem supera dificuldades da adolescência com criatividade e determinação.",
+    "poster": "assets/posters/lemonademouth.jpg"
+  },
+  {
+    "id": 83,
+    "titulo": "O Mentalista",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "8.1",
+    "ano": "2008",
+    "descricao": "Um consultor policial com habilidades aguçadas de observação ajuda o FBI a resolver crimes enquanto busca o assassino de sua família.",
+    "poster": "assets/posters/mentalista.jpg"
+  },
+  {
+    "id": 84,
+    "titulo": "Mr. Queen",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "8.3",
+    "ano": "2020",
+    "descricao": "A alma de um chef moderno vai parar no corpo de uma rainha da era Joseon, causando situações hilariantes.",
+    "poster": "assets/posters/mrqueen.jpg"
+  },
+  {
+    "id": 85,
+    "titulo": "O Pequenino",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "6.5",
+    "ano": "2021",
+    "descricao": "Um menino pequenino vive aventuras gigantes enquanto tenta encontrar seu lugar no mundo.",
+    "poster": "assets/posters/opequenino.jpg"
+  },
+ {
+    "id": 86,
+    "titulo": "Pretendente Surpresa",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "7.5",
+    "ano": "2021",
+    "descricao": "Uma jovem comum é escolhida para competir pelo coração de um príncipe em um reality show real.",
+    "poster": "assets/posters/pretendentesurpresa.jpg"
+  },
+ {
+    "id": 87,
+    "titulo": "Rainha das Lágrimas",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "7.9",
+    "ano": "2024",
+    "descricao": "O casamento de um herdeiro de uma família rica e a CEO de uma rede de supermercados começa a ruir, revelando segredos e colocando o amor dos dois à prova.",
+    "poster": "assets/posters/rainhadaslagrimas.jpg"
+  },
+  {
+    "id": 88,
+    "titulo": "Sorriso Real",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "7.4",
+    "ano": "2021",
+    "descricao": "Uma jovem comum troca de lugar com uma princesa e se envolve em intrigas da realeza.",
+    "poster": "assets/posters/sorrisoreal.jpg"
+  },
+  {
+  "id": 89,
+  "titulo": "The Rookie",
+  "tipo": "Serie",
+  "genero": "acao",
+  "nota": "7.5",
+  "ano": "2018",
+  "descricao": "Após sobreviver a um furacão, um homem de 40 anos realiza o sonho de se tornar o policial novato mais velho do departamento de Los Angeles.",
+  "poster": "assets/posters/therookie.jpg"
+},
+  {
+  "id": 90,
+  "titulo": "Tô ryca",
+  "tipo": "Serie",
+  "genero": "drama",
+  "nota": "7.2",
+  "ano": "2022",
+  "descricao": "Em uma cidade do interior, segredos de família, paixões proibidas e disputas por herança colocam à prova os laços entre pais e filhos.",
+  "poster": "assets/posters/toryca.jpg"
+},
+  {
+    "id": 91,
+    "titulo": "Tudo Bem Não Ser Normal ",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "6.8",
+    "ano": "2020",
+    "descricao": "Uma mulher revive o mesmo natal por vários anos consecutivos, aprendendo lições importantes sobre a vida.",
+    "poster": "assets/posters/tudobemnaosernormal.jpg"
+  },
+  {
+    "id": 92,
+    "titulo": "Vincenzo",
+    "tipo": "Serie",
+    "genero": "acao",
+    "nota": "8.4",
+    "ano": "2021",
+    "descricao": "Um advogado italiano de origem coreana retorna ao seu país e usa métodos de máfia para combater corporações corruptas.",
+    "poster": "assets/posters/vincenzo.jpg"
+  },
+ {
+  "id": 93,
+  "titulo": "Vovó Zona",
+  "tipo": "Serie",
+  "genero": "comedia",
+  "nota": "7.0",
+  "ano": "2022",
+  "descricao": "Uma avó debochada e sem papas na língua causa confusão na família com seu jeito irreverente de encarar a vida.",
+  "poster": "assets/posters/vovozona.jpg"
+},
+  {
+    "id": 94,
+    "titulo": "The Umbrella Academy",
+    "tipo": "Serie",
+    "genero": "acao",
+    "nota": "7.9",
+    "ano": "2019",
+    "descricao": "Irmãos adotados com superpoderes se reúnem após a morte do pai para impedir o apocalipse.",
+    "poster": "assets/posters/theumbrellaacademy.jpg"
+  },
+  {
+    "id": 95,
+    "titulo": "Desventuras em Série",
+    "tipo": "Serie",
+    "genero": "aventura",
+    "nota": "7.5",
+    "ano": "2017",
+    "descricao": "Três órfãos inteligentes fogem repetidamente do Conde Olaf, um vilão que quer roubar sua herança.",
+    "poster": "assets/posters/desventurasemserie.jpg"
+  },
+  {
+    "id": 96,
+    "titulo": "You",
+    "tipo": "Serie",
+    "genero": "terror",
+    "nota": "7.7",
+    "ano": "2018",
+    "descricao": "Um livreiro perturbado usa as redes sociais para se obsessionar e manipular as mulheres por quem se apaixona.",
+    "poster": "assets/posters/you.jpg"
+  },
+  {
+    "id": 97,
+    "titulo": "Lupin",
+    "tipo": "Serie",
+    "genero": "acao",
+    "nota": "7.5",
+    "ano": "2021",
+    "descricao": "Inspirado por Arsène Lupin, um homem usa disfarces e astúcia para vingar a morte do pai e expor uma família corrupta.",
+    "poster": "assets/posters/Lupin.jpg"
+  },
+  {
+    "id": 98,
+    "titulo": "Locke & Key",
+    "tipo": "Serie",
+    "genero": "terror",
+    "nota": "7.4",
+    "ano": "2020",
+    "descricao": "Três irmãos se mudam para a casa da família após a morte do pai e descobrem chaves mágicas com poderes sobrenaturais.",
+    "poster": "assets/posters/lockeekey.jpg"
+  },
+  {
+    "id": 99,
+    "titulo": "La Casa de Papel",
+    "tipo": "Serie",
+    "genero": "acao",
+    "nota": "8.2",
+    "ano": "2017",
+    "descricao": "Um gênio do crime recruta oito ladrões para executar o maior assalto da história da Espanha.",
+    "poster": "assets/posters/lacasadepapel.jpg"
+  },
+  {
+    "id": 100,
+    "titulo": "Auto da Compadecida",
+    "tipo": "Filme",
+    "genero": "aventura",
+    "nota": "8.1",
+    "ano": "2000",
+    "descricao": "João Grilo e Chicó se envolvem em confusões no sertão nordestino e acabam sendo julgados por Cristo, Maria e o Diabo.",
+    "poster": "assets/posters/autodacompadecida.jpg"
+  },
+  
+  {
+    "id": 101,
+    "titulo": "Minha Mãe é uma Peça",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "7.1",
+    "ano": "2013",
+    "descricao": "Dona Hermínia é uma mãe dramática e exagerada que tenta lidar com a independência dos filhos.",
+    "poster": "assets/posters/minhamaeumapeca.jpg"
+  },
+  {
+    "id": 102,
+    "titulo": "Central do Brasil",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "8.0",
+    "ano": "1998",
+    "descricao": "Uma ex-professora e um menino órfão viajam pelo Nordeste em busca do pai que ele nunca conheceu.",
+    "poster": "assets/posters/centralbrasil.jpg"
+  },
+  {
+    "id": 103,
+    "titulo": "Cidade de Deus",
+    "tipo": "Filme",
+    "genero": "acao",
+    "nota": "8.6",
+    "ano": "2002",
+    "descricao": "A história do crescimento do crime organizado numa favela carioca vista pelos olhos de um jovem fotógrafo.",
+    "poster": "assets/posters/cidadedeDeus.jpg"
+  },
+
+   {
+    "id": 105,
+    "titulo": "Beetlejuice",
+    "tipo": "Filme",
+    "genero": "comedia",
+    "nota": "7.5",
+    "ano": "1988",
+    "descricao": "Um casal de fantasmas contrata um fantasma trapaceiro para assustar a família que passou a viver em sua antiga casa.",
+    "poster": "assets/posters/beetlejuice.jpg"
+  },
+  {
+    "id": 106,
+    "titulo": "Brooklyn Nine-Nine",
+    "tipo": "Serie",
+    "genero": "comedia",
+    "nota": "8.4",
+    "ano": "2013",
+    "descricao": "As confusões de um grupo excêntrico de detetives de uma delegacia do Brooklyn sob o comando de um capitão extremamente sério.",
+    "poster": "assets/posters/brooklyn99.jpg"
+  },
+  {
+    "id": 107,
+    "titulo": "Cartas para Julieta",
+    "tipo": "Filme",
+    "genero": "romance",
+    "nota": "7.0",
+    "ano": "2010",
+    "descricao": "Uma jovem americana viaja a Verona e encontra uma carta antiga deixada no muro de Julieta, iniciando uma busca pelo amor perdido de uma mulher há 50 anos.",
+    "poster": "assets/posters/cartasparajulieta.jpg"
+  },
+  {
+    "id": 108,
+    "titulo": "The Duff",
+    "tipo": "Filme",
+    "genero": "comedia",
+    "nota": "6.6",
+    "ano": "2015",
+    "descricao": "Uma adolescente descobre que é vista como a 'amiga gorda e feia' do grupo e decide se reinventar antes do baile de formatura.",
+    "poster": "assets/posters/duff.jpg"
+  },
+  {
+    "id": 109,
+    "titulo": "Estrelas Além do Tempo",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "7.8",
+    "ano": "2016",
+    "descricao": "A história de três cientistas afro-americanas que tiveram papel fundamental na NASA durante a corrida espacial dos anos 1960.",
+    "poster": "assets/posters/estrelasalémdotempo.jpg"
+  },
+  {
+    "id": 110,
+    "titulo": "E.T. - O Extraterrestre",
+    "tipo": "Filme",
+    "genero": "ficcao",
+    "nota": "7.9",
+    "ano": "1982",
+    "descricao": "Um garoto descobre e faz amizade com um alienígena perdido na Terra, ajudando-o a voltar para casa enquanto fogem do governo.",
+    "poster": "assets/posters/et.jpg"
+  },
+  {
+    "id": 111,
+    "titulo": "Extraordinário",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "8.0",
+    "ano": "2017",
+    "descricao": "Um garoto com uma deformidade facial entra na escola tradicional pela primeira vez e precisa enfrentar os desafios de se encaixar.",
+    "poster": "assets/posters/extraordinário.jpg"
+  },
+  {
+    "id": 112,
+    "titulo": "O Homem Com H",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "7.7",
+    "ano": "2018",
+    "descricao": "A trajetória do cantor Eduardo Costa, desde sua infância humilde em Minas Gerais até o sucesso na música sertaneja.",
+    "poster": "assets/posters/homemcomh.jpg"
+  },
+  {
+    "id": 113,
+    "titulo": "Jumanji",
+    "tipo": "Filme",
+    "genero": "aventura",
+    "nota": "7.0",
+    "ano": "1995",
+    "descricao": "Dois irmãos liberam um homem que ficou presa por décadas em um misterioso jogo de tabuleiro que traz a selva para a vida real.",
+    "poster": "assets/posters/jumanji.jpg"
+  },
+  {
+    "id": 114,
+    "titulo": "O Menino do Pijama Listrado",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "8.0",
+    "ano": "2008",
+    "descricao": "Um garoto alemão faz amizade com um menino judeu do outro lado da cerca de um campo de concentração durante a Segunda Guerra Mundial.",
+    "poster": "assets/posters/omeninodopijamalistrado.jpg"
+  },
+  {
+    "id": 115,
+    "titulo": "Os Intocáveis",
+    "tipo": "Filme",
+    "genero": "drama",
+    "nota": "8.5",
+    "ano": "2011",
+    "descricao": "Após um acidente, um milionário tetraplégico contrata como cuidador um jovem da periferia, e os dois desenvolvem uma amizade inesperada.",
+    "poster": "assets/posters/osintocáveis.jpg"
+  },
+  {
+    "id": 116,
+    "titulo": "The Middle",
+    "tipo": "Serie",
+    "genero": "comedia",
+    "nota": "7.6",
+    "ano": "2009",
+    "descricao": "As aventuras e desventuras diárias de uma família de classe média que vive no interior de Indiana.",
+    "poster": "assets/posters/themiddle.jpg"
+  },
+  {
+    "id": 117,
+    "titulo": "Tropa de Elite",
+    "tipo": "Filme",
+    "genero": "acao",
+    "nota": "8.6",
+    "ano": "2007",
+    "descricao": "Um capitão do BOPE precisa treinar seu substituto enquanto enfrenta a corrupção e a violência do tráfico no Rio de Janeiro.",
+    "poster": "assets/posters/tropadeelite.jpg"
+  },
+
+  {
+    "id": 118,
+    "titulo": "Jovens Titãs em Ação",
+    "tipo": "Serie",
+    "genero": "animacao",
+    "nota": "7.8",
+    "ano": "2013",
+    "descricao": "Robin, Estelar, Cyborg, Fera e Raven vivem aventuras cômicas e bizarras enquanto tentam ser heróis e lidar com o dia a dia em sua torre.",
+    "poster": "assets/posters/jovenstitãs.jpg"
+  },
+  {
+    "id": 119,
+    "titulo": "Bob Esponja",
+    "tipo": "Serie",
+    "genero": "animacao",
+    "nota": "8.2",
+    "ano": "1999",
+    "descricao": "Um simpático e otimista personagem que vive em Fenda do Biquíni e trabalha como cozinheiro no restaurante Siri Cascudo.",
+    "poster": "assets/posters/bobesponja.jpg"
+  },
+  {
+    "id": 120,
+    "titulo": "Ursinho Pooh",
+    "tipo": "Serie",
+    "genero": "animacao",
+    "nota": "7.5",
+    "ano": "1988",
+    "descricao": "Ursinho Pooh e seus amigos da Floresta dos Cem Acres vivem aventuras simples sobre amizade, mel e companheirismo.",
+    "poster": "assets/posters/ursinhopooh.jpg"
+  },
+  {
+    "id": 121,
+    "titulo": "Madagascar",
+    "tipo": "Filme",
+    "genero": "animacao",
+    "nota": "7.1",
+    "ano": "2005",
+    "descricao": "Quatro animais mimados do zoológico de Nova York acabam parando na ilha de Madagascar e precisam aprender a sobreviver na natureza.",
+    "poster": "assets/posters/Madagascar.jpg"
+  },
+
+  {
+    "id": 122,
+    "titulo": "Ela é o Cara",
+    "tipo": "Filme",
+    "genero": "comedia",
+    "nota": "6.6",
+    "ano": "2006",
+    "descricao": "Após o time feminino de futebol ser cortado, uma garota se disfarça de seu irmão gêmeo para jogar no time masculino de uma escola rival.",
+    "poster": "assets/posters/elaéocara.jpg"
+  },
+
+  {
+    "id": 123,
+    "titulo": "Agente K.C.",
+    "tipo": "Serie",
+    "genero": "acao",
+    "nota": "6.5",
+    "ano": "2015",
+    "descricao": "Uma adolescente descobre que seus pais são espiões aposentados e passa a treinar para seguir os mesmos passos, equilibrando missões secretas com a vida escolar.",
+    "poster": "assets/posters/agenteKC.jpg"
+  },
+  {
+    "id": 124,
+    "titulo": "Wandinha",
+    "tipo": "Serie",
+    "genero": "terror",
+    "nota": "8.1",
+    "ano": "2022",
+    "descricao": "Wandinha Addams investiga uma série de assassinatos enquanto desenvolve seus poderes psíquicos e enfrenta novos desafios na Nevermore Academy.",
+    "poster": "assets/posters/wandinhaserie.jpg"
+  },
+  {
+    "id": 125,
+    "titulo": "Como Eu Era Antes de Você",
+    "tipo": "Filme",
+    "genero": "romance",
+    "nota": "7.5",
+    "ano": "2016",
+    "descricao": "Uma jovem se torna cuidadora de um ex-atleta que ficou tetraplégico após um acidente, e os dois desenvolvem um vínculo que muda suas vidas.",
+    "poster": "assets/posters/overaoquemudouminhavida.jpg"
+  },
+  {
+    "id": 126,
+    "titulo": "One Tree Hill",
+    "tipo": "Serie",
+    "genero": "drama",
+    "nota": "7.6",
+    "ano": "2003",
+    "descricao": "Dois irmãos meio-irmãos rivais, que dividem o amor pelo basquete, precisam aprender a conviver em uma pequena cidade da Carolina do Norte.",
+    "poster": "assets/posters/onetreehill.jpg"
+  },
+  {
+    "id": 127,
+    "titulo": "Diário de um Vampiro",
+    "tipo": "Serie",
+    "genero": "terror",
+    "nota": "7.7",
+    "ano": "2009",
+    "descricao": "Uma jovem se vê dividida entre dois irmãos vampiros enquanto sua cidade é dominada por forças sobrenaturais.",
+    "poster": "assets/posters/diariodeumvampiro.jpg"
+  },
+  {
+    "id": 128,
+    "titulo": "Friends",
+    "tipo": "Serie",
+    "genero": "comedia",
+    "nota": "8.9",
+    "ano": "1994",
+    "descricao": "Seis amigos vivem suas vidas pessoais e profissionais em Manhattan, enfrentando relacionamentos, carreiras e o dia a dia da amizade.",
+    "poster": "assets/posters/friends.jpg"
+  },
+  {
+    "id": 129,
+    "titulo": "Liv e Maddie",
+    "tipo": "Serie",
+    "genero": "comedia",
+    "nota": "7.0",
+    "ano": "2013",
+    "descricao": "Irmãs gêmeas idênticas, uma estrela de TV e outra atleta, precisam se readaptar à vida juntas quando uma delas volta para casa após anos de fama.",
+    "poster": "assets/posters/livemaddie.jpg"
+  },
+  {
+    "id": 130,
+    "titulo": "Jessie",
+    "tipo": "Serie",
+    "genero": "comedia",
+    "nota": "6.9",
+    "ano": "2011",
+    "descricao": "Uma jovem do interior se torna babá de quatro crianças adotadas por um casal rico e excêntrico em Nova York.",
+    "poster": "assets/posters/jessie.jpg"
+  }
+]

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | 4Frames</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        .login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 30px;
+            padding: 50px;
+            width: 100%;
+            max-width: 450px;
+        }
+        .login-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .login-card h2 span {
+            color: #ff335c;
+        }
+        .login-input {
+            width: 100%;
+            padding: 16px 20px;
+            margin: 12px 0;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            color: white;
+            font-size: 1rem;
+        }
+        .login-input:focus {
+            outline: none;
+            border-color: #ff335c;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 16px;
+            background: #ff335c;
+            border: none;
+            border-radius: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .login-btn:hover {
+            background: #ff5477;
+            transform: translateY(-2px);
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            color: #c9cbd5;
+        }
+        .login-link a {
+            color: #ff335c;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="login-page">
+    <div class="login-card">
+        <h2>4<span>Frames</span></h2>
+        <p style="margin-bottom: 30px; color: #c9cbd5;">Crie sua conta gratuita</p>
+        
+        <input type="text" id="nome" class="login-input" placeholder="Seu nome">
+        <input type="email" id="email" class="login-input" placeholder="Seu email">
+        <input type="password" id="senha" class="login-input" placeholder="Sua senha">
+        
+        <button class="login-btn" onclick="fazerCadastro()">Cadastrar</button>
+        
+        <div class="login-link">
+            Já tem conta? <a href="login.html">Faça login</a>
+        </div>
+    </div>
+    
+    <script>
+        // Entrance animation
+        if (typeof gsap !== 'undefined') {
+            gsap.from('.login-card', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' });
+        }
+
+        const API_URL = '/api';
+        
+        async function fazerCadastro() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            
+            if (!nome || !email || !senha) {
+                alert('Preencha todos os campos');
+                return;
+            }
+            
+            if (senha.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres');
+                return;
+            }
+            
+            try {
+                const resposta = await fetch(`${API_URL}/cadastro`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nome, email, senha })
+                });
+                
+                const dados = await resposta.json();
+                
+                if (resposta.ok) {
+                    alert('Cadastro realizado com sucesso! Faça login.');
+                    window.location.href = 'login.html';
+                } else {
+                    alert(dados.erro || 'Erro no cadastro');
+                }
+            } catch (erro) {
+                alert('Erro ao conectar com o servidor. Verifique se o Node.js está rodando.');
+            }
+        }
+        
+        // Permitir apertar Enter
+        document.getElementById('senha').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') fazerCadastro();
+        });
+    </script>
+</body>
+</html>

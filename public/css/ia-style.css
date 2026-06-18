@@ -1,0 +1,336 @@
+/* ESTILOS DO AGENTE IA - MAIS BONITO */
+
+.ia-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.ia-card {
+    background: linear-gradient(135deg, rgba(255, 51, 92, 0.15), rgba(128, 0, 255, 0.1));
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.ia-card:hover {
+    border-color: rgba(255, 51, 92, 0.5);
+    box-shadow: 0 25px 50px rgba(255, 51, 92, 0.2);
+    transform: translateY(-5px);
+}
+
+.ia-card h2 {
+    margin: 0 0 15px 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.ia-card p {
+    color: #c9cbd5;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.ia-textarea {
+    width: 100%;
+    padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    resize: vertical;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.ia-textarea:focus {
+    outline: none;
+    border-color: #ff335c;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 20px rgba(255, 51, 92, 0.2);
+}
+
+.ia-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.ia-btn {
+    background: linear-gradient(135deg, #ff335c, #ff6b8a);
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ia-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 51, 92, 0.4);
+}
+
+.ia-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ia-recomendacoes {
+    margin-top: 35px;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ia-mensagem {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border-left: 5px solid #ff335c;
+    color: white;
+    font-weight: 500;
+}
+
+.ia-filmes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.ia-filme-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ia-filme-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff335c;
+    box-shadow: 0 15px 30px rgba(255, 51, 92, 0.2);
+}
+
+.ia-filme-poster {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #2a2a3a, #1a1a2a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+}
+
+.ia-filme-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.ia-filme-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.ia-filme-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #c9cbd5;
+}
+
+.ia-add-btn {
+    width: 100%;
+    background: #ff335c;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+.ia-add-btn:hover {
+    background: #ff5477;
+}
+
+.ia-add-btn.adicionado {
+    background: #28a745;
+    cursor: default;
+}
+
+/* Responsivo IA */
+@media (max-width: 768px) {
+    .ia-container {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+    
+    .ia-card {
+        padding: 25px;
+    }
+    
+    .ia-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .ia-filmes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    
+    .ia-filme-poster {
+        height: 220px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ia-card {
+        padding: 20px;
+    }
+    
+    .ia-card h2 {
+        font-size: 1.2rem;
+    }
+    
+    .ia-filmes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .ia-filme-poster {
+        height: 180px;
+    }
+    
+    .ia-filme-info h4 {
+        font-size: 0.9rem;
+    }
+}
+
+/* MODAL BONITO */
+.filme-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.filme-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.filme-modal-content {
+    background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+    border-radius: 28px;
+    max-width: 450px;
+    width: 90%;
+    border: 1px solid rgba(255, 51, 92, 0.4);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+.filme-modal.active .filme-modal-content {
+    transform: scale(1);
+}
+
+.filme-modal-header {
+    padding: 22px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filme-modal-header h3 {
+    margin: 0;
+    color: #ff335c;
+    font-size: 1.4rem;
+}
+
+.filme-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filme-modal-close:hover {
+    color: #ff335c;
+    transform: rotate(90deg);
+}
+
+.filme-modal-body {
+    padding: 25px;
+    color: #c9cbd5;
+    line-height: 1.6;
+}
+
+.filme-modal-body p {
+    margin: 10px 0;
+}
+
+.filme-modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-add-btn {
+    width: 100%;
+    background: #ff335c;
+    border: none;
+    padding: 14px;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-add-btn:hover {
+    background: #ff5477;
+    transform: translateY(-2px);
+}

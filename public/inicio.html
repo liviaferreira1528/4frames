@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Frames</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <style>
+        .ia-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .ia-card {
+            background: linear-gradient(135deg, rgba(255, 51, 92, 0.12), rgba(128, 0, 255, 0.08));
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .ia-card:hover {
+            border-color: rgba(255, 51, 92, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3px);
+        }
+        .ia-card h2 {
+            margin: 0 0 12px 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            letter-spacing: -0.3px;
+        }
+        .ia-card h2::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ff335c;
+            border-radius: 50%;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+        .ia-card p {
+            color: #a0a0b0;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .ia-textarea {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            color: white;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            resize: vertical;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .ia-textarea:focus {
+            outline: none;
+            border-color: #ff335c;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .ia-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .ia-btn {
+            background: #ff335c;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .ia-btn:hover {
+            background: #ff5477;
+            transform: translateY(-2px);
+        }
+        .ia-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .ia-mensagem {
+            font-size: 1rem;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            border-left: 3px solid #ff335c;
+            color: #d0d0e0;
+            font-weight: 400;
+        }
+        .ia-filmes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .ia-filme-card {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .ia-filme-card:hover {
+            transform: translateY(-6px);
+            border-color: #ff335c;
+        }
+        .ia-filme-poster {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #1a1a2a, #0f0f1a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #ff335c;
+        }
+        .ia-filme-info {
+            padding: 14px;
+            text-align: center;
+        }
+        .ia-filme-info h4 {
+            margin: 0 0 6px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+        .ia-filme-info p {
+            margin: 0;
+            font-size: 0.75rem;
+            color: #888;
+        }
+        @media (max-width: 768px) {
+            .ia-container { margin: 40px auto; padding: 0 15px; }
+            .ia-card { padding: 25px; }
+            .ia-card h2 { font-size: 1.4rem; }
+            .ia-filmes-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
+            .ia-filme-poster { height: 200px; font-size: 2rem; }
+        }
+        @media (max-width: 480px) {
+            .ia-card { padding: 20px; }
+            .ia-card h2 { font-size: 1.2rem; }
+            .ia-filmes-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+            .ia-filme-poster { height: 160px; }
+            .ia-filme-info h4 { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <header class="navbar">
+        <div class="logo-area">
+            <div class="logo-icon"></div>
+            <h2 class="logo">4Frames</h2>
+        </div>
+        <nav class="nav-menu">
+            <a class="active" href="inicio.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="em-alta.html">Em alta</a>
+            <a href="minha-lista.html">Minha Lista</a>
+        </nav>
+        <div class="header-buttons">
+            <button class="search-btn"><span class="search-icon"></span></button>
+            <button class="profile-btn" id="btnPerfil">
+                <span class="profile-name">Entrar</span>
+                <span class="profile-logout-icon"><i class="bi bi-box-arrow-right"></i></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="badge">Sua plataforma pessoal de watchlist</div>
+            <h1 class="gsap-fade-up">Organize tudo que você <span>quer assistir.</span></h1>
+            <p>Descubra filmes e séries, acompanhe favoritos, salve conteúdos e monte sua experiência personalizada.</p>
+            <div class="hero-buttons">
+                <button class="primary-btn" id="btnMinhaLista">Criar Minha Lista</button>
+                <button class="secondary-btn" id="btnExplorar">Explorar Catálogo</button>
+            </div>
+            <div class="stats gsap-fade-up">
+                <div class="stat-card"><h3>+500</h3><p>Títulos disponíveis</p></div>
+                <div class="stat-card"><h3>24h</h3><p>Atualizações</p></div>
+                <div class="stat-card"><h3>98%</h3><p>Satisfação</p></div>
+            </div>
+        </div>
+    </main>
+
+    <section class="ia-container">
+        <div class="ia-card">
+            <h2>Como você está se sentindo agora?</h2>
+            <p>Conte como foi seu dia e nossa curadoria recomenda filmes perfeitos para o seu momento</p>
+            <textarea id="iaSentimentoInput" class="ia-textarea" rows="3" placeholder="Ex: Estou me sentindo triste hoje... ou: Estou super feliz e animado!"></textarea>
+            <button id="iaRecomendarBtn" class="ia-btn">Recomendar filmes</button>
+            <div id="iaResultado" style="display: none;">
+                <div id="iaMensagem" class="ia-mensagem"></div>
+                <div id="iaFilmesGrid" class="ia-filmes-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon"></span>
+                <span>4Frames</span>
+            </div>
+            <div class="footer-links">
+                <a href="inicio.html">Início</a>
+                <a href="explorar.html">Explorar</a>
+                <a href="em-alta.html">Em alta</a>
+                <a href="minha-lista.html">Minha Lista</a>
+            </div>
+            <div class="footer-copy">
+                © 2026 4Frames - Sua watchlist pessoal
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn"></button>
+
+    <script src="js/app.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/animacoes.js"></script>
+    <script src="js/busca-overlay.js"></script>
+    <script src="js/agente-ia.js"></script>
+    <script src="js/filmes-data.js"></script>
+    
+    <script>
+        const token = localStorage.getItem('token');
+        const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+        const btnPerfil = document.getElementById('btnPerfil');
+        const profileName = btnPerfil.querySelector('.profile-name');
+        
+        if (token && usuario.nome) {
+            profileName.textContent = usuario.nome;
+            btnPerfil.classList.add('logado');
+            btnPerfil.addEventListener('click', () => {
+                if (confirm('Deseja sair da sua conta?')) {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('usuario');
+                    location.reload();
+                }
+            });
+        } else {
+            profileName.textContent = 'Entrar';
+            btnPerfil.addEventListener('click', () => {
+                window.location.href = 'login.html';
+            });
+        }
+        
+        document.getElementById('btnMinhaLista')?.addEventListener('click', () => {
+            if (token) window.location.href = 'minha-lista.html';
+            else { alert('Faça login para criar sua lista!'); window.location.href = 'login.html'; }
+        });
+        document.getElementById('btnExplorar')?.addEventListener('click', () => window.location.href = 'explorar.html');
+        
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) scrollBtn.classList.add('show');
+            else scrollBtn.classList.remove('show');
+        });
+        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        
+        function adicionarBotaoSurpreenda() {
+            const heroButtons = document.querySelector('.hero-buttons');
+            if (!heroButtons || document.getElementById('btnSurpreenda')) return;
+            
+            const btnSurpreenda = document.createElement('button');
+            btnSurpreenda.id = 'btnSurpreenda';
+            btnSurpreenda.className = 'secondary-btn';
+            btnSurpreenda.innerHTML = 'Surpreenda-me';
+            btnSurpreenda.onclick = () => {
+                const indice = Math.floor(Math.random() * catalogoFilmes.length);
+                const filme = catalogoFilmes[indice];
+                if (typeof abrirModalFilme === 'function') {
+                    abrirModalFilme(filme);
+                } else {
+                    alert(`${filme.titulo}\n${filme.ano} • ${filme.nota}\n\n${filme.descricao}`);
+                }
+            };
+            heroButtons.appendChild(btnSurpreenda);
+        }
+        
+        document.addEventListener('DOMContentLoaded', adicionarBotaoSurpreenda);
+        if (document.readyState !== 'loading') adicionarBotaoSurpreenda();
+        
+        (function() {
+            const btn = document.getElementById('iaRecomendarBtn');
+            const input = document.getElementById('iaSentimentoInput');
+            const resultadoDiv = document.getElementById('iaResultado');
+            const mensagemDiv = document.getElementById('iaMensagem');
+            const filmesGrid = document.getElementById('iaFilmesGrid');
+            
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    const texto = input.value.trim();
+                    if (!texto) { alert('Digite como você está se sentindo'); return; }
+                    const textoOriginal = btn.innerHTML;
+                    btn.innerHTML = 'Analisando...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        const emocao = AGENTE_IA.mapearEmocao(texto);
+                        const filmes = AGENTE_IA.getRecomendacoes(emocao);
+                        mensagemDiv.innerHTML = AGENTE_IA.mensagemPersonalizada(emocao);
+                        filmesGrid.innerHTML = '';
+                        
+                        filmes.forEach(filme => {
+                            const card = document.createElement('div');
+                            card.className = 'ia-filme-card';
+                            card.innerHTML = `
+                                <div class="ia-filme-poster"><i class="bi bi-camera-reels-fill"></i></div>
+                                <div class="ia-filme-info">
+                                    <h4>${filme.titulo}</h4>
+                                    <p>${filme.ano} • ${filme.genero}</p>
+                                </div>
+                            `;
+                            card.style.cursor = 'pointer';
+                            card.addEventListener('click', () => {
+                                if (typeof abrirModalFilme === 'function') abrirModalFilme(filme);
+                                else alert(`${filme.titulo}\n${filme.ano} • ${filme.genero}`);
+                            });
+                            filmesGrid.appendChild(card);
+                        });
+                        
+                        resultadoDiv.style.display = 'block';
+                        btn.innerHTML = textoOriginal;
+                        btn.disabled = false;
+                    }, 500);
+                });
+            }
+        })();
+    </script>
+    <!-- SEARCH OVERLAY -->
+    <div id="searchOverlay" class="search-overlay">
+        <div class="search-overlay-content">
+            <div class="search-overlay-header">
+                <input type="text" id="searchOverlayInput" placeholder="Pesquisar filmes ou séries..." autofocus>
+                <button id="searchOverlayClose" class="search-overlay-close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div id="searchOverlayResults" class="search-overlay-results"></div>
+        </div>
+    </div>
+</body>
+</html>
