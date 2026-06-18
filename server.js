@@ -350,6 +350,38 @@ app.post('/api/popular', async (req, res) => {
 });
 
 // ==========================================
+// ROTA IMPORTAR FILMES DO JSON (disparar uma vez)
+// ==========================================
+
+const fs = require('fs');
+
+app.get('/api/importar', async (req, res) => {
+    const jsonPath = path.join(__dirname, 'watchlist', 'data', 'filmes.json');
+    if (!fs.existsSync(jsonPath)) {
+        return res.status(404).json({ erro: 'Arquivo filmes.json não encontrado' });
+    }
+    try {
+        const filmes = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+        let importados = 0;
+        for (const filme of filmes) {
+            const [existe] = await pool.execute('SELECT id FROM titulos WHERE tmdb_id = ?', [filme.id]);
+            if (existe.length > 0) continue;
+            await pool.execute(
+                `INSERT INTO titulos (tmdb_id, titulo, tipo, genero, nota, ano, sinopse, poster_url)
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+                [filme.id, filme.titulo || 'Título', filme.tipo || 'Filme', filme.genero || 'Não informado',
+                 parseFloat(filme.nota) || 0, filme.ano || '2000', filme.descricao || '', filme.poster || 'assets/posters/default.jpg']
+            );
+            importados++;
+        }
+        res.json({ mensagem: `${importados} títulos importados de ${filmes.length}` });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ erro: 'Erro ao importar' });
+    }
+});
+
+// ==========================================
 // ROTAS DE PÁGINAS
 // ==========================================
 
