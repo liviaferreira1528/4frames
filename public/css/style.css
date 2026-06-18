@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #0b0b1a;
+    background: linear-gradient(90deg, rgba(5,12,30,.78) 12%, rgba(5,12,30,.68) 35%, rgba(5,12,30,.38) 65%, rgba(5,12,30,.75) 100%),
+                url('../assets/watchlist-bg.png') center/cover no-repeat fixed;
     color: #fff;
     overflow-x: hidden;
     min-height: 100vh;
@@ -451,7 +452,7 @@ body {
 .explorar-header,
 .lista-header {
     max-width: 1200px;
-    margin: 100px auto 40px;
+    margin: 120px auto 40px;
     padding: 0 20px;
 }
 
@@ -1092,6 +1093,31 @@ body {
     .details-content h1 {
         font-size: 1.6rem;
     }
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+}
+.search-container input {
+    width: 100%;
+    padding: 16px 24px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+.search-container input:focus {
+    border-color: #ff335c;
+    background: rgba(255,255,255,0.12);
+}
+.search-container input::placeholder {
+    color: rgba(255,255,255,0.3);
 }
 
 .lista-page::before {

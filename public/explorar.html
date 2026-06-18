@@ -47,12 +47,33 @@
             <input type="text" id="searchInput" placeholder="Pesquisar filmes ou séries...">
         </section>
 
-        <section class="filters">
-            <button class="filter-btn active" data-category="todos">Todos</button>
-            <button class="filter-btn" data-category="filme">Filmes</button>
-            <button class="filter-btn" data-category="serie">Séries</button>
-            <button class="filter-btn" data-category="acao">Ação</button>
-            <button class="filter-btn" data-category="drama">Drama</button>
+        <section class="filters gsap-fade-up">
+            <div class="filter-group">
+                <span>Tipo:</span>
+                <button class="filter-btn-cat active" data-category="todos">Todos</button>
+                <button class="filter-btn-cat" data-category="filme">Filmes</button>
+                <button class="filter-btn-cat" data-category="serie">Séries</button>
+            </div>
+            <div class="filter-group">
+                <span>Gênero:</span>
+                <button class="filter-btn-gen active" data-genero="todos">Todos</button>
+                <button class="filter-btn-gen" data-genero="acao">Ação</button>
+                <button class="filter-btn-gen" data-genero="comedia">Comédia</button>
+                <button class="filter-btn-gen" data-genero="drama">Drama</button>
+                <button class="filter-btn-gen" data-genero="terror">Terror</button>
+                <button class="filter-btn-gen" data-genero="romance">Romance</button>
+                <button class="filter-btn-gen" data-genero="ficcao">Ficção</button>
+                <button class="filter-btn-gen" data-genero="animacao">Animação</button>
+            </div>
+            <div class="filter-group">
+                <span>Nota:</span>
+                <button class="filter-btn-nota active" data-nota="todas">Todas</button>
+                <button class="filter-btn-nota" data-nota="9+">9+</button>
+                <button class="filter-btn-nota" data-nota="8-9">8-9</button>
+                <button class="filter-btn-nota" data-nota="7-8">7-8</button>
+                <button class="filter-btn-nota" data-nota="6-7">6-7</button>
+                <button class="filter-btn-nota" data-nota="menos6">-6</button>
+            </div>
         </section>
 
         <section class="movies-grid gsap-stagger" id="moviesGrid"></section>

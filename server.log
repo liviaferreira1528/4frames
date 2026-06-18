@@ -1,0 +1,17 @@
+
+🚀 Servidor rodando em http://localhost:3000
+
+📋 ROTAS DISPONÍVEIS:
+   POST   /api/cadastro
+   POST   /api/login
+   GET    /api/titulos
+   GET    /api/titulos/filtro
+   GET    /api/titulos/:id
+   GET    /api/watchlist (requer token)
+   POST   /api/watchlist (requer token)
+   PUT    /api/watchlist/:id (requer token)
+   DELETE /api/watchlist/:id (requer token)
+   POST   /api/popular (importar filmes)
+
+✅ Conectado ao banco de dados MySQL!
+Migration executada com sucesso
