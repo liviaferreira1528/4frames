@@ -16,12 +16,18 @@ function parseUrl(url) {
 
 const fromUrl = parseUrl(process.env.DATABASE_URL) || parseUrl(process.env.MYSQL_URL);
 
+const host = process.env.MYSQLHOST || process.env.MYSQL_HOST || 'localhost';
+const port = process.env.MYSQLPORT || process.env.MYSQL_PORT || 3306;
+const user = process.env.MYSQLUSER || process.env.MYSQL_USER || 'root';
+const password = process.env.MYSQLPASSWORD || process.env.MYSQL_PASSWORD || '13978b';
+const database = process.env.MYSQLDATABASE || process.env.MYSQL_DATABASE || '4frames';
+
 const pool = mysql.createPool({
-    host: fromUrl?.host || process.env.MYSQL_HOST || 'localhost',
-    port: fromUrl?.port || process.env.MYSQL_PORT || 3306,
-    user: fromUrl?.user || process.env.MYSQL_USER || 'root',
-    password: fromUrl?.password || process.env.MYSQL_PASSWORD || '13978b',
-    database: fromUrl?.database || process.env.MYSQL_DATABASE || '4frames',
+    host: fromUrl?.host || host,
+    port: fromUrl?.port || port,
+    user: fromUrl?.user || user,
+    password: fromUrl?.password || password,
+    database: fromUrl?.database || database,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
