@@ -128,16 +128,30 @@
             transform: translateY(-6px);
             border-color: #ff335c;
         }
-        .ia-filme-poster {
+        .ia-filme-poster-wrapper {
             width: 100%;
             height: 260px;
-            object-fit: cover;
+            position: relative;
+            overflow: hidden;
             background: linear-gradient(135deg, #1a1a2a, #0f0f1a);
+        }
+        .ia-filme-poster-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .ia-filme-card:hover .ia-filme-poster-img {
+            transform: scale(1.05);
+        }
+        .ia-filme-poster-fallback {
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
-            font-weight: 300;
             color: #ff335c;
         }
         .ia-filme-info {
@@ -160,13 +174,14 @@
             .ia-card { padding: 25px; }
             .ia-card h2 { font-size: 1.4rem; }
             .ia-filmes-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
-            .ia-filme-poster { height: 200px; font-size: 2rem; }
+            .ia-filme-poster-wrapper { height: 200px; }
+            .ia-filme-poster-fallback { font-size: 2rem; }
         }
         @media (max-width: 480px) {
             .ia-card { padding: 20px; }
             .ia-card h2 { font-size: 1.2rem; }
             .ia-filmes-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
-            .ia-filme-poster { height: 160px; }
+            .ia-filme-poster-wrapper { height: 160px; }
             .ia-filme-info h4 { font-size: 0.85rem; }
         }
     </style>
@@ -335,8 +350,17 @@
                         filmes.forEach(filme => {
                             const card = document.createElement('div');
                             card.className = 'ia-filme-card';
+                            
+                            const posterUrl = filme.poster || '';
+                            
                             card.innerHTML = `
-                                <div class="ia-filme-poster"><i class="bi bi-camera-reels-fill"></i></div>
+                                <div class="ia-filme-poster-wrapper">
+                                    ${posterUrl
+                                        ? `<img src="${posterUrl}" class="ia-filme-poster-img" alt="${filme.titulo}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                           <div class="ia-filme-poster-fallback" style="display:none;"><i class="bi bi-camera-reels-fill"></i></div>`
+                                        : `<div class="ia-filme-poster-fallback"><i class="bi bi-camera-reels-fill"></i></div>`
+                                    }
+                                </div>
                                 <div class="ia-filme-info">
                                     <h4>${filme.titulo}</h4>
                                     <p>${filme.ano} • ${filme.genero}</p>

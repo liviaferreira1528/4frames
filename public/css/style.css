@@ -110,6 +110,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    padding: 0;
 }
 
 .search-btn:hover {
@@ -118,10 +119,9 @@ body {
 }
 
 .search-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-icon::before {
@@ -129,7 +129,10 @@ body {
     color: #fff;
     font-size: 1.1rem;
     transform: rotate(45deg);
-    display: inline-block;
+    display: block;
+    line-height: 0;
+    margin-top: -3px; /* visual center compensation */
+    margin-left: -3px; /* visual center compensation */
 }
 
 .profile-btn {
